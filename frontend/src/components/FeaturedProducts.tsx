@@ -25,7 +25,14 @@ const featuredProducts = [
   }
 ]
 
-function ProductCard({ product }) {
+type FeaturedProduct = {
+  title: string;
+  description: string;
+  cta: string;
+  image: string;
+};
+
+function ProductCard({ product }: { product: FeaturedProduct }) {
   return (
     <div className="h-[500px] w-full">
       <Card className="h-full w-full overflow-hidden relative border-0 shadow-none">
