@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
+import { withNetlify } from '@netlify/next'
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+	reactStrictMode: true,
+	// You can add other config options here
+}
 
-export default nextConfig;
+export default withNetlify(nextConfig)
